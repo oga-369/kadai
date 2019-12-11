@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+    button {
+            font-size:24px;
+            font-weight: bold;
+            color: white;
+            background: red;
+    }
+</style>
+
+</head>
+<body>
+    <button id="button">今日のラッキーアイテム</button>
+    <script>
+        const button = document.getElementById('button')
+        button.addEventListener('click', () => { // 
+            const num = Math.random()
+            if(num < 0.3) {
+                alert('黄色のマフラー')
+            } else　if(num < 0.5) {
+                alert('スルメ')
+            } else if(num < 0.8) {
+                alert('マシュマロ')
+            } else {
+                alert('赤い靴下')
+            }
+            alert(num)
+        })
+    </script>
+</body>
+
+</html>
