@@ -1,7 +1,26 @@
+
 <html>
+<head>
+<style>
+    button {
+            font-size:24px;
+            font-weight: bold;
+            color: white;
+            background: red;
+    }
+</style>
+
+</head>
+<body>
+    <button id="button">今日のラッキーアイテム</button>
     <script>
-        fetch('https://4000-a645ac32-5d03-490d-8a22-dadcacc3be42.ws-ap01.gitpod.io/')
+        const button = document.getElementById('button')
+        button.addEventListener('click', () => {
+         fetch('https://4000-a645ac32-5d03-490d-8a22-dadcacc3be42.ws-ap01.gitpod.io/path/example?key=value')
         .then(res => res.text())
         .then(data => alert(data))
+        })
     </script>
+</body>
+
 </html>
